@@ -32,25 +32,11 @@
             </form>
         </div>
     </div>
-    
-    <script src="/public/assets/jquery/jquery.min.js"></script>
-    <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/require.js"></script>
+    <script src="/public/js/config.js"></script>
+
     <script>
-    	$('form').on('submit',function(){
-    		var that = $(this);
-    		$.ajax({
-    			url:'/api/employee/employeeLogin',
-    			type:'post',
-    			data:that.serialize(),
-    			success:function(infor){
-    				if(infor.error){
-    					return alert(infor.message);
-    				}
-    				location.href= '/';
-    			}
-    		})
-    		return false;
-    	})
+    	require(['src/login'])
     </script>
 </body>
 </html>
