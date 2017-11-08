@@ -1,0 +1,10 @@
+define(['jquery'],function($){
+	$.ajax({
+		url:'/api/user/queryUse',
+		type:'get',
+		data:{page:1,pageSize:10},
+		success:function(info){
+			console.log(info);
+		}
+	})
+})

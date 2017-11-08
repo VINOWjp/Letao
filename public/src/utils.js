@@ -25,5 +25,8 @@ define(['jquery'],function($){
         		}
         	})
         })
+        $('.navs a + ul').prev().on('click',function(){
+             $(this).next().slideToggle();
+        })
 
 })
